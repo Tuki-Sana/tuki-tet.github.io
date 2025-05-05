@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テトリス</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="score-board">
+      スコア: <span id="score">0</span><br>
+      最高スコア: <span id="high-score">0</span>
+    </div>
+    <div class="game-area">
+      <canvas id="game" width="300" height="600"></canvas>
+      <div class="side-panel">
+        <div class="next-label">NEXT</div>
+        <canvas id="next-piece" width="120" height="120"></canvas>
+        <div class="bonus-list">
+          <h3>ボーナススコア</h3>
+          <ul>
+            <li>1行: 100点</li>
+            <li>2行: 300点</li>
+            <li>3行: 500点</li>
+            <li>4行: 800点</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="game-over">
+      <div style="font-size:2em; font-weight:bold; color:#c00; margin-bottom:0.5em;">GAME OVER</div>
+      <div style="font-size:1.2em; margin-bottom:1.5em;">最終スコア: <span id="final-score">0</span></div>
+      <button onclick="location.reload()">再挑戦</button>
+    </div>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+</html>
